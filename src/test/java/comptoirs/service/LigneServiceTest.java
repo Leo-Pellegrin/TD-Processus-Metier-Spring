@@ -65,7 +65,7 @@ class LigneServiceTest {
     @Test
     void testAjouterLigneMiseAJourUnitesCommandees() throws Exception{
         var produit = produitDAO.findById(REFERENCE_PRODUIT_DISPONIBLE_3).orElseThrow();
-        var ligne = service.ajouterLigne(NUMERO_COMMANDE_PAS_LIVREE, REFERENCE_PRODUIT_DISPONIBLE_2, 3);
+        var ligne = service.ajouterLigne(NUMERO_COMMANDE_PAS_LIVREE, REFERENCE_PRODUIT_DISPONIBLE_3, 3);
 
         assertEquals(ligne.getProduit().getUnitesCommandees(), produit.getUnitesCommandees() + 3);
     }
